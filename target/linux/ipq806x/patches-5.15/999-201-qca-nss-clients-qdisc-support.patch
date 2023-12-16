@@ -52,7 +52,7 @@
  	dev->needs_free_netdev = true;
 --- a/include/linux/netdevice.h
 +++ b/include/linux/netdevice.h
-@@ -4763,6 +4763,15 @@ void dev_uc_flush(struct net_device *dev
+@@ -4758,6 +4758,15 @@ void dev_uc_flush(struct net_device *dev
  void dev_uc_init(struct net_device *dev);
  
  /**
@@ -68,7 +68,7 @@
   *  __dev_uc_sync - Synchonize device's unicast list
   *  @dev:  device to sync
   *  @sync: function to call if address should be added
-@@ -5312,6 +5321,11 @@ static inline bool netif_is_failover_sla
+@@ -5316,6 +5325,11 @@ static inline bool netif_is_failover_sla
  	return dev->priv_flags & IFF_FAILOVER_SLAVE;
  }
  
@@ -333,7 +333,7 @@
  #endif
 --- a/net/sched/sch_api.c
 +++ b/net/sched/sch_api.c
-@@ -2324,4 +2324,26 @@ static int __init pktsched_init(void)
+@@ -2351,4 +2351,26 @@ static int __init pktsched_init(void)
  	return 0;
  }
  

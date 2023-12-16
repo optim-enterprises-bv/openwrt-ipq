@@ -214,9 +214,9 @@
  
 --- a/arch/arm/boot/dts/qcom-ipq8064-eax500.dtsi
 +++ b/arch/arm/boot/dts/qcom-ipq8064-eax500.dtsi
-@@ -198,10 +198,17 @@
- 			0x00094 0x4e        /* PORT6_STATUS */
- 			>;
+@@ -283,10 +283,17 @@
+ 			};
+ 		};
  	};
 +
 +	phy4: ethernet-phy@4 {
@@ -232,7 +232,7 @@
  
  	phy-mode = "rgmii";
  	qcom,id = <1>;
-@@ -217,6 +224,9 @@
+@@ -302,6 +309,9 @@
  
  &gmac2 {
  	status = "okay";
@@ -244,8 +244,8 @@
  	qcom,id = <2>;
 --- a/arch/arm/boot/dts/qcom-ipq8064-ea8500.dts
 +++ b/arch/arm/boot/dts/qcom-ipq8064-ea8500.dts
-@@ -111,18 +111,3 @@
- 		reg = <4>;
+@@ -105,18 +105,3 @@
+ 		reg = <0x5f80000 0x2080000>;
  	};
  };
 -
@@ -265,7 +265,7 @@
 -};
 --- a/arch/arm/boot/dts/qcom-ipq8064-ad7200-c2600.dtsi
 +++ b/arch/arm/boot/dts/qcom-ipq8064-ad7200-c2600.dtsi
-@@ -357,6 +357,9 @@
+@@ -439,6 +439,9 @@
  
  &gmac1 {
  	status = "okay";
@@ -275,7 +275,7 @@
  	phy-mode = "rgmii";
  	qcom,id = <1>;
  
-@@ -375,6 +378,9 @@
+@@ -457,6 +460,9 @@
  
  &gmac2 {
  	status = "okay";
@@ -287,7 +287,7 @@
  
 --- a/arch/arm/boot/dts/qcom-ipq8064-r7500.dts
 +++ b/arch/arm/boot/dts/qcom-ipq8064-r7500.dts
-@@ -274,6 +274,9 @@
+@@ -356,6 +356,9 @@
  
  &gmac1 {
  	status = "okay";
@@ -297,7 +297,7 @@
  	phy-mode = "rgmii";
  	qcom,id = <1>;
  
-@@ -291,6 +294,9 @@
+@@ -373,6 +376,9 @@
  
  &gmac2 {
  	status = "okay";
@@ -309,7 +309,7 @@
  
 --- a/arch/arm/boot/dts/qcom-ipq8064-r7500v2.dts
 +++ b/arch/arm/boot/dts/qcom-ipq8064-r7500v2.dts
-@@ -357,6 +357,9 @@
+@@ -439,6 +439,9 @@
  
  &gmac1 {
  	status = "okay";
@@ -319,7 +319,7 @@
  	phy-mode = "rgmii";
  	qcom,id = <1>;
  
-@@ -374,6 +377,9 @@
+@@ -456,6 +459,9 @@
  
  &gmac2 {
  	status = "okay";
@@ -331,7 +331,7 @@
  
 --- a/arch/arm/boot/dts/qcom-ipq8064-d7800.dts
 +++ b/arch/arm/boot/dts/qcom-ipq8064-d7800.dts
-@@ -360,6 +360,9 @@
+@@ -442,6 +442,9 @@
  
  &gmac1 {
  	status = "okay";
@@ -341,7 +341,7 @@
  	phy-mode = "rgmii";
  	qcom,id = <1>;
  
-@@ -377,6 +380,9 @@
+@@ -459,6 +462,9 @@
  
  &gmac2 {
  	status = "okay";
@@ -416,9 +416,9 @@
  
  	pinctrl-0 = <&mdio0_pins>;
  	pinctrl-names = "default";
-@@ -170,10 +198,14 @@
- 			0x00094 0x4e        /* PORT6_STATUS */
- 			>;
+@@ -256,10 +284,14 @@
+ 			};
+ 		};
  	};
 +
  };
@@ -431,7 +431,7 @@
  
  	nand@0 {
  		reg = <0>;
-@@ -207,6 +239,7 @@
+@@ -293,6 +325,7 @@
  			qcom,ath10k-calibration-variant = "ASRock-G10";
  		};
  	};
@@ -459,7 +459,7 @@
 + };
 --- a/arch/arm/boot/dts/qcom-ipq8065-nighthawk.dtsi
 +++ b/arch/arm/boot/dts/qcom-ipq8065-nighthawk.dtsi
-@@ -344,14 +344,23 @@
+@@ -404,14 +404,23 @@
  
  &gmac1 {
  	status = "okay";
@@ -484,7 +484,7 @@
  	qcom,irq = <255>;
  	mdiobus = <&mdio0>;
  
-@@ -369,14 +378,23 @@
+@@ -429,14 +438,23 @@
  
  &gmac2 {
  	status = "okay";
@@ -511,8 +511,8 @@
  
 --- a/arch/arm/boot/dts/qcom-ipq8064-ea7500-v1.dts
 +++ b/arch/arm/boot/dts/qcom-ipq8064-ea7500-v1.dts
-@@ -89,3 +89,16 @@
- 		reg = <0x6080000 0x1f80000>;
+@@ -115,3 +115,16 @@
+ 		};
  	};
  };
 +
@@ -530,9 +530,9 @@
 +};
 --- a/arch/arm/boot/dts/qcom-ipq8065-rt4230w-rev6.dts
 +++ b/arch/arm/boot/dts/qcom-ipq8065-rt4230w-rev6.dts
-@@ -311,10 +311,28 @@
- 			0x00054 0xc832c832  /* LED_CTRL_1 */
- 			>;
+@@ -491,10 +491,28 @@
+ 			};
+ 		};
  	};
 +
 +	phy4: ethernet-phy@4 {
@@ -559,7 +559,7 @@
  	phy-mode = "rgmii";
  	qcom,id = <0>;
  
-@@ -332,6 +350,16 @@
+@@ -512,6 +530,16 @@
  
  &gmac1 {
  	status = "okay";
@@ -578,7 +578,7 @@
  
 --- a/arch/arm/boot/dts/qcom-ipq8065-nbg6817.dts
 +++ b/arch/arm/boot/dts/qcom-ipq8065-nbg6817.dts
-@@ -284,13 +284,23 @@
+@@ -347,13 +347,23 @@
  
  &gmac1 {
  	status = "okay";
@@ -602,7 +602,7 @@
  	qcom,irq = <255>;
  	mdiobus = <&mdio0>;
  
-@@ -305,13 +315,23 @@
+@@ -368,13 +378,23 @@
  
  &gmac2 {
  	status = "okay";

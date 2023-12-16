@@ -1,6 +1,6 @@
 --- a/arch/arm/boot/dts/qcom-ipq8064-wg2600hp.dts
 +++ b/arch/arm/boot/dts/qcom-ipq8064-wg2600hp.dts
-@@ -161,9 +161,25 @@
+@@ -244,9 +244,25 @@ switch@10 {
  &gmac1 {
  	status = "okay";
  
@@ -26,7 +26,7 @@
  	pinctrl-0 = <&rgmii2_pins>;
  	pinctrl-names = "default";
  
-@@ -179,9 +195,25 @@
+@@ -262,9 +278,25 @@ switch@10 {
  &gmac2 {
  	status = "okay";
  
